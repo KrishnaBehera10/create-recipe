@@ -50,7 +50,7 @@ function Nav() {
           to="/favourite"
           className={(obj) => (obj.isActive ? "text-red-600" : "")}
         >
-          Fevourite
+          Favourite
         </NavLink>
         <NavLink
           to="/create-recipes"
@@ -92,7 +92,7 @@ function Nav() {
             onClick={() => setopen(false)}
             className={(obj) => (obj.isActive ? "text-red-600" : "")}
           >
-            Fevourite
+            Favourite
           </NavLink>
           <NavLink
             to="/create-recipes"
