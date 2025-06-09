@@ -7,7 +7,7 @@ import { Slide, toast } from "react-toastify";
 import { useNavigate } from "react-router";
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function RecipeDetails() {
   const { id } = useParams();
@@ -41,6 +41,7 @@ function RecipeDetails() {
 
   function remove() {
     const remove = data.filter((data) => data.id != id);
+
     setdata(remove);
     toast.success("Delete recipe", {
       autoClose: 500,
@@ -48,22 +49,37 @@ function RecipeDetails() {
       transition: Slide,
     });
     localStorage.setItem("recipe", JSON.stringify(remove));
+    localStorage.setItem("favourite", JSON.stringify(remove));
+
     Navigate("/recipe");
   }
 
+  const [isfav, setisfav] = useState(false);
   const [fav, setfav] = useState(
     JSON.parse(localStorage.getItem("favourite")) || []
   );
 
-  function favourite() {
-    localStorage.setItem("favourite", JSON.stringify([...fav, filterRecipe]));
-    setfav([...fav, filterRecipe]);
-  }
+  useEffect(() => {
+    const isAvaliable = JSON.parse(localStorage.getItem("favourite")) || [];
+    const istrue = isAvaliable.some((data) => data.id == filterRecipe?.id);
+    setisfav(istrue);
+  }, [filterRecipe?.id]);
 
-  function unfavourite() {
-    const remove = fav.filter((data) => data.id != filterRecipe?.id);
-    setfav(remove);
-    localStorage.setItem("favourite", JSON.stringify(remove));
+  function favouriteToggle() {
+    let favouriteAvaliable =
+      JSON.parse(localStorage.getItem("favourite")) || [];
+
+    if (isfav) {
+      favouriteAvaliable = favouriteAvaliable.filter(
+        (data) => data.id != filterRecipe?.id
+      );
+    } else {
+      favouriteAvaliable.push(filterRecipe);
+    }
+
+    localStorage.setItem("favourite", JSON.stringify(favouriteAvaliable));
+    setisfav(!isfav);
+    setfav(favouriteAvaliable);
   }
 
   return (
@@ -83,12 +99,12 @@ function RecipeDetails() {
             {fav.find((data) => data.id == filterRecipe?.id) ? (
               <GoHeartFill
                 className="absolute text-red-500 top-5 right-5 text-2xl cursor-pointer"
-                onClick={unfavourite}
+                onClick={favouriteToggle}
               />
             ) : (
               <GoHeart
                 className="absolute text-red-500 top-5 right-5 text-2xl cursor-pointer"
-                onClick={favourite}
+                onClick={favouriteToggle}
               />
             )}
           </div>
