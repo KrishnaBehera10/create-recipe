@@ -16,9 +16,6 @@ HTML5 & CSS3
 
 (Add any other libraries or frameworks you used, e.g., Tailwind CSS, React Router, etc.)
 
-How to Use
-Open the app in your browser: https://krishnabehera10.github.io/create-recipe/
-
 Fill out the form with recipe title, ingredients, and instructions.
 
 Click submit to save your recipe.
