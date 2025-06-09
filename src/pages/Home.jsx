@@ -18,7 +18,7 @@ function Home() {
           className="bg-zinc-800 px-5 py-2 cursor-pointer rounded hover:bg-green-950"
           onClick={handleNavigate}
         >
-          Explore Recipes
+          Create recipes
         </button>
       </div>
       <div className="flex justify-center items-center">
