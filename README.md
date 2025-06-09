@@ -1,12 +1,24 @@
-# React + Vite
+Create Recipe is a simple and interactive web application that allows users to easily create, save, and manage their favorite recipes. This app is perfect for anyone looking to organize their cooking ideas or explore new dishes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Add recipe title, ingredients, cooking instructions, and serving size.
 
-Currently, two official plugins are available:
+Form validation to ensure all required fields are filled correctly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Responsive design for smooth use on both mobile and desktop devices.
 
-## Expanding the ESLint configuration
+Clean and user-friendly interface for a seamless experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Technologies Used
+React (JavaScript library)
+
+HTML5 & CSS3
+
+(Add any other libraries or frameworks you used, e.g., Tailwind CSS, React Router, etc.)
+
+Fill out the form with recipe title, ingredients, and instructions.
+
+Click submit to save your recipe.
+
+View and manage your saved recipes on the page.
+
