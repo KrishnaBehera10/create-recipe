@@ -1,8 +1,6 @@
 🍽️ Create Recipe App
 A dynamic and responsive web application built using React, Tailwind CSS, and HTML. This app allows users to create, edit, delete, and favorite their own recipes — all with a clean UI and persistent local storage.
 
-🔗 Live Demo: Click Here
-
 🚀 Features
 📝 Create your own custom recipes
 
