@@ -1,24 +1,28 @@
-Create Recipe is a simple and interactive web application that allows users to easily create, save, and manage their favorite recipes. This app is perfect for anyone looking to organize their cooking ideas or explore new dishes.
+🍽️ Create Recipe App
+A dynamic and responsive web application built using React, Tailwind CSS, and HTML. This app allows users to create, edit, delete, and favorite their own recipes — all with a clean UI and persistent local storage.
 
-Features
-Add recipe title, ingredients, cooking instructions, and serving size.
+🔗 Live Demo: Click Here
 
-Form validation to ensure all required fields are filled correctly.
+🚀 Features
+📝 Create your own custom recipes
 
-Responsive design for smooth use on both mobile and desktop devices.
+❤️ Mark recipes as favorites
 
-Clean and user-friendly interface for a seamless experience.
+✏️ Edit and delete existing recipes
 
-Technologies Used
-React (JavaScript library)
+💾 Data saved using localStorage
 
-HTML5 & CSS3
+🧠 Global state management using React Context API
 
-(Add any other libraries or frameworks you used, e.g., Tailwind CSS, React Router, etc.)
+📱 Fully responsive design with Tailwind CSS
 
-Fill out the form with recipe title, ingredients, and instructions.
+🛠️ Built With
+⚛️ React – UI library
 
-Click submit to save your recipe.
+🎨 Tailwind CSS – Utility-first CSS framework
 
-View and manage your saved recipes on the page.
+🌐 HTML5
 
+⚡ Vite – Development build tool
+
+🌍 React Context API – Global state management
